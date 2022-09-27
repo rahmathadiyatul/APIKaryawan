@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Karyawan</title>
+</head>
+
+<body>
+    <h1>
+        Nama : <%= karyawan.nama%>
+    </h1>
+    <h2>
+        Jenis Kelamin : <%= karyawan.gender%>
+    </h2>
+    <h2>
+        Tanggal lahir : <%= karyawan.lahir%>
+    </h2>
+    <h2>
+        Asal Kampus : <%= karyawan.universitas%>
+    </h2>
+    <h2>
+        Skill IT : <%= karyawan.skills%>
+    </h2>
+    <form action="/karyawan/<%=karyawan._id%>/edit">
+        <button>Edit</button>
+    </form>
+    <form action="/karyawan/<%=karyawan._id%>?_method=DELETE" method="POST">
+        <button>Delete</button>
+    </form>
+    <footer>
+        <a href="/karyawan">Semua Karyawan</a>
+    </footer>
+</body>
+
+</html>

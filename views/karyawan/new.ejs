@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Karyawan</title>
+</head>
+
+<body>
+    <form action="/karyawan" method="POST">
+        <div>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="karyawan[nama]" value="<%=karyawan.nama %>">
+        </div>
+        <div>
+            <label for="gender">Jenis Kelamin</label>
+            <input type="text" id="gender" name="karyawan[gender]" value="<%= karyawan.gender%>">
+        </div>
+        <div>
+            <label for="lahir">Tanggal Lahir</label>
+            <input type="date" id="lahir" name="karyawan[lahir]" value="<%= karyawan.lahir%>">
+        </div>
+        <div>
+            <label for="universitas">Asal Kampus</label>
+            <input type="text" id="universitas" name="karyawan[universitas]" value="<%= karyawan.universitas%>">
+        </div>
+        <div>
+            <label for="skills">Kemampuan IT</label>
+            <input type="text" id="skills" name="karyawan[skills]" value="<%= karyawan.skills%>">
+        </div>
+        <button>Tambahkan Karyawan</button>
+    </form>
+    <a href="/karyawan">List Karyawan</a>
+</body>
+
+</html>
